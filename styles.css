@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  /* CSS HEX */
+  --prussian-blue: #003049ff;
+  --fire-engine-red: #d62828ff;
+  --orange-wheel: #f77f00ff;
+  --xanthous: #fcbf49ff;
+  --vanilla: #eae2b7ff;
+}
+
+body {
+  background-color: var(--fire-engine-red);
+  color: var(--vanilla);
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  background-color: var(--vanilla);
+  color: var(--fire-engine-red);
+  padding: 3rem;
+}
+
+.herobox {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  margin: 2rem;
+  max-height: 700px;
+}
+
+img.hero {
+  height: 600px;
+}
+
+.top-text {
+  margin-top: 1rem;
+  color: var(--xanthous);
+  padding: 3rem;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 8rem;
+  max-width: 100px;
+}
+
+h2,
+.subtitle {
+  font-size: 2.5rem;
+}
+
+/* Navigation styling */
+.topnav {
+  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.topnav > a {
+  color: var(--vanilla);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.topnav > a:hover {
+  color: var(--prussian-blue);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  img.hero {
+    width: 0px;
+  }
+
+  h1 {
+    font-size: 75px;
+  }
+}
