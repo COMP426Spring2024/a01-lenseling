@@ -4,78 +4,116 @@
 
   /* CSS HEX */
   --prussian-blue: #003049ff;
-  --fire-engine-red: #d62828ff;
+  --brick-red: #82321c;
   --orange-wheel: #f77f00ff;
   --xanthous: #fcbf49ff;
-  --vanilla: #eae2b7ff;
+  --vanilla: #f0eaa7;
 }
 
 body {
-  background-color: var(--fire-engine-red);
+  background-color: var(--brick-red);
   color: var(--vanilla);
   display: flex;
   flex-direction: column;
+  font-family: Arial, sans-serif;
 }
 
-.section {
-  background-color: var(--vanilla);
-  color: var(--fire-engine-red);
-  padding: 3rem;
+section {
+  padding: 1.5rem;
 }
 
 .herobox {
+  width: 100%;
+  max-height: fit-content;
   display: flex;
   flex-direction: row;
   color: white;
-  margin: 2rem;
-  max-height: 700px;
 }
 
 img.hero {
-  height: 600px;
+  object-fit: fill;
+  width: 100%;
+  height: min-content;
+}
+
+img.poster {
+  width: auto;
+  height: 300px;
 }
 
 .top-text {
   margin-top: 1rem;
-  color: var(--xanthous);
   padding: 3rem;
 }
 
-/* Heading styles */
+/* Font styles */
 h1 {
-  font-size: 8rem;
-  max-width: 100px;
+  font-size: 5rem;
+  font-family: "Garamond", serif;
 }
 
 h2,
 .subtitle {
   font-size: 2.5rem;
+  font-family: "Garamond", serif;
 }
 
+a {
+  color: var(--vanilla);
+}
+a:hover {
+  color: var(--prussian-blue);
+}
 /* Navigation styling */
 .topnav {
-  height: 40px;
+  height: 70px;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 4px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .topnav > a {
-  color: var(--vanilla);
+  color: var(--fire-engine-red);
   text-align: center;
   text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .topnav > a:hover {
   color: var(--prussian-blue);
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  img.hero {
-    width: 0px;
-  }
+/* Lists styling */
+li {
+  margin-left: 1.5rem;
+}
 
-  h1 {
-    font-size: 75px;
-  }
+/* Ability table */
+th {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+tr:nth-child(odd) {
+  background-color: #632615;
+}
+tr {
+  text-align: center;
+}
+
+/* Two-column sections */
+.row-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  flex-direction: column;
+  width: 50%;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin: 1.5rem;
 }
