@@ -5,6 +5,7 @@
   /* CSS HEX */
   --prussian-blue: #003049ff;
   --brick-red: #82321c;
+  --darker-red: #632615;
   --orange-wheel: #f77f00ff;
   --xanthous: #fcbf49ff;
   --vanilla: #f0eaa7;
@@ -16,24 +17,40 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Arial, sans-serif;
+  text-align: left;
 }
 
 section {
-  padding: 1.5rem;
+  padding: 3rem;
+}
+
+.centered {
+  text-align: center;
 }
 
 .herobox {
   width: 100%;
-  max-height: fit-content;
+  max-height: 500px;
   display: flex;
   flex-direction: row;
   color: white;
+  object-fit: contain;
+  background-color: white;
+  justify-content: center;
+}
+
+/* Image styling */
+img {
+  max-width: 800px;
+  height: auto;
+  margin-bottom: 1rem;
+  box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 img.hero {
-  object-fit: fill;
-  width: 100%;
-  height: min-content;
+  width: auto;
+  height: auto;
+  box-shadow: none;
 }
 
 img.poster {
@@ -56,13 +73,14 @@ h2,
 .subtitle {
   font-size: 2.5rem;
   font-family: "Garamond", serif;
+  margin-bottom: 2rem;
 }
 
 a {
   color: var(--vanilla);
 }
 a:hover {
-  color: var(--prussian-blue);
+  color: var(--xanthous);
 }
 /* Navigation styling */
 .topnav {
@@ -82,7 +100,7 @@ a:hover {
 }
 
 .topnav > a:hover {
-  color: var(--prussian-blue);
+  color: var(--xanthous);
 }
 
 /* Lists styling */
@@ -95,10 +113,14 @@ th {
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 tr:nth-child(odd) {
-  background-color: #632615;
+  background-color: var(--darker-red);
 }
 tr {
   text-align: center;
+}
+th,
+td {
+  padding: 1rem;
 }
 
 /* Two-column sections */
@@ -108,12 +130,33 @@ tr {
 }
 
 .col {
+  display: flex;
   flex-direction: column;
   width: 50%;
+  align-items: center;
+  margin: 2rem;
+}
+
+.row-layout:nth-child(odd) {
+  background-color: var(--darker-red);
 }
 
 /* Footer */
 footer {
   text-align: center;
   margin: 1.5rem;
+}
+
+select {
+  margin: 1.5rem;
+  height: 30px;
+  width: 150px;
+}
+
+@media (max-width: 800px) {
+  .row-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
 }
